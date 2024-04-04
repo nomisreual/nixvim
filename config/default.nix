@@ -19,8 +19,7 @@
     ./plugins/telescope/telescope.nix
   ];
 
-  # colorschemes.tokyonight.enable = true;
-  colorschemes.gruvbox.enable = true;
+  colorschemes.tokyonight.enable = true;
 
   globals = {
     mapleader = " ";
