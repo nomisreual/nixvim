@@ -12,12 +12,13 @@
       };
     };
     formattersByFt = {
-      python = [ "isort" "black" ];
-      lua = [ "stylua" ];
-      html = [ "prettierd" ];
-      javascript = [ "prettierd" ];
-      sql = [ "sleek" ];
-      "*" = [ "codespell" ];
+      python = ["isort" "black"];
+      lua = ["stylua"];
+      html = ["prettierd" "prettier"];
+      javascript = ["prettierd" "prettier"];
+      nix = ["alejandra"];
+      sql = ["sleek"];
+      "*" = ["codespell"];
     };
   };
 }

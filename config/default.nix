@@ -6,8 +6,9 @@
     ./plugins/completion/cmp.nix
     ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
+    ./plugins/lsp/none-ls.nix
+    ./plugins/lsp/conform.nix
     ./plugins/statusline/lualine.nix
-    ./plugins/formatter/conform.nix
     ./plugins/filetree/neotree.nix
     ./plugins/git/gitsigns.nix
     ./plugins/utilities/comment.nix
@@ -32,5 +33,4 @@
     providers.xclip.enable = true;
     providers.wl-copy.enable = true;
   };
-
 }
