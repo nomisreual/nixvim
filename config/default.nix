@@ -18,6 +18,7 @@
     ./plugins/utilities/whichkey.nix
     ./plugins/treesitter/treesitter.nix
     ./plugins/telescope/telescope.nix
+    ./plugins/ui
   ];
 
   colorschemes.tokyonight.enable = true;
