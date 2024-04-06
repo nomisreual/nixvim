@@ -35,10 +35,5 @@
     hlsearch = true;
     # Enable 24-bit colors
     termguicolors = true;
-    # Set tabs to 4 spaces
-    tabstop = 4;
-    softtabstop = 4;
-    showtabline = 4;
-    expandtab = true;
   };
 }

@@ -11,14 +11,15 @@
     ./plugins/statusline/lualine.nix
     ./plugins/filetree/neotree.nix
     ./plugins/git/gitsigns.nix
-    ./plugins/utilities/comment.nix
-    ./plugins/utilities/indent-blankline.nix
-    ./plugins/utilities/mini.nix
-    ./plugins/utilities/tmux-navigator.nix
-    ./plugins/utilities/whichkey.nix
+    # ./plugins/utilities/comment.nix
+    # ./plugins/utilities/indent-blankline.nix
+    # ./plugins/utilities/mini.nix
+    # ./plugins/utilities/tmux-navigator.nix
+    # ./plugins/utilities/whichkey.nix
     ./plugins/treesitter/treesitter.nix
     ./plugins/telescope/telescope.nix
     ./plugins/ui
+    ./plugins/utilities
   ];
 
   colorschemes.tokyonight.enable = true;
