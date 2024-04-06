@@ -20,6 +20,7 @@
     ./plugins/telescope/telescope.nix
     ./plugins/ui
     ./plugins/utilities
+    ./plugins/database
   ];
 
   colorschemes.tokyonight.enable = true;
