@@ -1,6 +1,4 @@
 # Detect tabstop and shiftwidth automatically
 {
-  plugins.sleuth = {
-    enable = true;
-  };
+  plugins.sleuth = {enable = true;};
 }

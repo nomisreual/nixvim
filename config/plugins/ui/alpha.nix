@@ -44,12 +44,7 @@
               inherit val;
               opts = {
                 inherit hl shortcut;
-                keymap = [
-                  "n"
-                  shortcut
-                  cmd
-                  {}
-                ];
+                keymap = ["n" shortcut cmd {}];
                 position = "center";
                 cursor = 7;
                 width = 40;
@@ -58,20 +53,10 @@
               };
             };
           in [
-            (
-              mkButton
-              "f"
+            (mkButton "f"
               "<CMD>lua require('telescope.builtin').find_files({hidden = true})<CR>"
-              "🔍 Find File"
-              "Operator"
-            )
-            (
-              mkButton
-              "q"
-              "<CMD>qa<CR>"
-              "💣 Quit Neovim"
-              "String"
-            )
+              "🔍 Find File" "Operator")
+            (mkButton "q" "<CMD>qa<CR>" "💣 Quit Neovim" "String")
           ];
         }
       ];

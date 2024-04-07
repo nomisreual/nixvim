@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./dadbod.nix
-  ];
-}
+{imports = [./dadbod.nix];}

@@ -1,7 +1,1 @@
-{
-  imports = [
-    ./alpha.nix
-    ./noice.nix
-    ./nvim-notify.nix
-  ];
-}
+{imports = [./alpha.nix ./noice.nix ./nvim-notify.nix];}

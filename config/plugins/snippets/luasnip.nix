@@ -1,9 +1,7 @@
 {pkgs, ...}: {
   plugins.luasnip = {
     enable = true;
-    extraConfig = {
-      enable_autosnippets = true;
-    };
+    extraConfig = {enable_autosnippets = true;};
     fromVscode = [
       {
         lazyLoad = true;

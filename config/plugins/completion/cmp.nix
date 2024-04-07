@@ -18,12 +18,8 @@
           {name = "path";}
         ];
         window = {
-          completion = {
-            border = "rounded";
-          };
-          documentation = {
-            border = "rounded";
-          };
+          completion = {border = "rounded";};
+          documentation = {border = "rounded";};
         };
         mapping = {
           # Select the [n]ext item:

@@ -1,6 +1,3 @@
 {pkgs, ...}: {
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-dadbod
-    vim-dadbod-ui
-  ];
+  extraPlugins = with pkgs.vimPlugins; [vim-dadbod vim-dadbod-ui];
 }
