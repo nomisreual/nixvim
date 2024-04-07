@@ -8,6 +8,7 @@
       "<leader>s".name = "[S]earch";
       "<leader>w".name = "[W]orkspace";
       "<leader>f".name = "[F]iletree";
+      "<leader>n".name = "[N]notifications";
     };
     icons = {
       separator = "#";

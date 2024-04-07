@@ -10,7 +10,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>un";
+      key = "<leader>nd";
       action = ''
         <cmd>lua require("notify").dismiss({ silent = true, pending = true })<cr>
       '';

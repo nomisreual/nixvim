@@ -12,6 +12,7 @@
         snippet.expand = "luasnip";
         sources = [
           {name = "nvim_lsp";}
+          {name = "emoji";}
           {name = "buffer";}
           {name = "luasnip";}
           {name = "path";}

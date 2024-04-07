@@ -5,10 +5,6 @@
     ./keymaps.nix
     ./plugins/completion/cmp.nix
     ./plugins/lsp
-    # ./plugins/lsp/fidget.nix
-    # ./plugins/lsp/lsp.nix
-    # ./plugins/lsp/none-ls.nix
-    # ./plugins/lsp/conform.nix
     ./plugins/statusline/lualine.nix
     ./plugins/filetree/neotree.nix
     ./plugins/git/gitsigns.nix
