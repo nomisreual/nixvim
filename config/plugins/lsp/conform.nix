@@ -14,8 +14,8 @@
     formattersByFt = {
       python = ["isort" "black"];
       lua = ["stylua"];
-      html = ["prettierd" "prettier"];
-      javascript = ["prettierd" "prettier"];
+      # html = ["prettierd" "prettier"];
+      # javascript = ["prettierd" "prettier"];
       nix = ["alejandra"];
       sql = ["sleek"];
       "*" = ["codespell"];
