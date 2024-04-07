@@ -42,7 +42,4 @@
     cmp_luasnip.enable = true; # Snippets
     cmp-path.enable = true; # File system paths
   };
-
-  # Actual snippets:
-  plugins.luasnip.enable = true;
 }
