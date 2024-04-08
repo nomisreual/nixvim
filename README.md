@@ -16,7 +16,7 @@ Standalone [neovim](https://neovim.io/) configuration utilizing [nixvim](https:/
 
 ## Usage 🚀
 
-In order to use this configuration you need to have access to the nix package manager (which available on any linux distribution and even on MacOS).
+In order to use this configuration you need to have access to the nix package manager and have to have flakes enables (which is available on any linux distribution and even on MacOS).
 
 To quickly try it out you can run the following:
 
