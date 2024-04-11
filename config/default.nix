@@ -7,13 +7,13 @@
     ./plugins/lsp
     ./plugins/statusline/lualine.nix
     ./plugins/filetree/neotree.nix
-    ./plugins/git/gitsigns.nix
     ./plugins/treesitter/treesitter.nix
     ./plugins/telescope/telescope.nix
     ./plugins/ui
     ./plugins/utilities
     ./plugins/database
     ./plugins/snippets
+    ./plugins/git
   ];
 
   colorschemes.tokyonight.enable = true;
