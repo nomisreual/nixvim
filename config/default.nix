@@ -1,19 +1,8 @@
 {
-  # Import all your configuration modules here
   imports = [
     ./options.nix
     ./keymaps.nix
-    ./plugins/completion/cmp.nix
-    ./plugins/lsp
-    ./plugins/statusline/lualine.nix
-    ./plugins/filetree/neotree.nix
-    ./plugins/treesitter/treesitter.nix
-    ./plugins/telescope/telescope.nix
-    ./plugins/ui
-    ./plugins/utilities
-    ./plugins/database
-    ./plugins/snippets
-    ./plugins/git
+    ./plugs
   ];
 
   colorschemes.tokyonight.enable = true;
@@ -29,4 +18,20 @@
     providers.xclip.enable = true;
     providers.wl-copy.enable = true;
   };
+
+  ###############
+  ##  Plugins  ##
+  ###############
+
+  # Git related:
+  gitsigns.enable = true;
+
+  # Completion:
+  cmp.enable = true;
+
+  # Databases:
+  dadbod.enable = true;
+
+  # Filetrees:
+  neotree.enable = true;
 }
