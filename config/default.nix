@@ -34,4 +34,10 @@
 
   # Filetrees:
   neotree.enable = true;
+
+  # LSP and Formatters:
+  lsp.enable = true;
+  none-ls.enable = true;
+  conform.enable = true;
+  fidget.enable = true;
 }
