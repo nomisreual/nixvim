@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins.lsp-format.enable = true;
 
   plugins.lsp = {
@@ -6,8 +6,10 @@
     servers = {
       lua-ls.enable = true;
       nil_ls.enable = true;
-      # pylsp.enable = true;
-      pyright.enable = true;
+      pylsp = {
+        enable = true;
+        package = pkgs.python311Packages.python-lsp-server;
+      };
     };
     keymaps = {
       silent = true;
