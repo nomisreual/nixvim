@@ -40,4 +40,10 @@
   none-ls.enable = true;
   conform.enable = true;
   fidget.enable = true;
+
+  # Snippet engine:
+  luasnip.enable = true;
+
+  # UI
+  lualine.enable = true;
 }

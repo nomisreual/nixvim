@@ -46,7 +46,7 @@
                 inherit hl shortcut;
                 keymap = ["n" shortcut cmd {}];
                 position = "center";
-                cursor = 7;
+                cursor = 3;
                 width = 40;
                 align_shortcut = "right";
                 hl_shortcut = "Keyword";
