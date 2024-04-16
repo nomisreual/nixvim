@@ -10,52 +10,72 @@
       keymaps = {
         "<leader>sh" = {
           action = "help_tags";
-          desc = "[S]earch [H]elp";
+          options = {
+            desc = "[S]earch [H]elp";
+          };
         };
 
         "<leader>sk" = {
           action = "keymaps";
-          desc = "[S]earch [K]eymaps";
+          options = {
+            desc = "[S]earch [K]eymaps";
+          };
         };
 
         "<leader>sf" = {
           action = "find_files";
-          desc = "[S]earch [F]iles";
+          options = {
+            desc = "[S]earch [F]iles";
+          };
         };
 
         "<leader>ss" = {
           action = "builtin";
-          desc = "[S]earch [S]elect Telescope";
+          options = {
+            desc = "[S]earch [S]elect Telescope";
+          };
         };
 
         "<leader>sw" = {
           action = "grep_string";
-          desc = "[S]earch current [W]ord";
+          options = {
+            desc = "[S]earch current [W]ord";
+          };
         };
 
         "<leader>sg" = {
           action = "live_grep";
-          desc = "[S]earch by [G]rep";
+          options = {
+            desc = "[S]earch by [G]rep";
+          };
         };
 
         "<leader>sd" = {
           action = "diagnostics";
-          desc = "[S]earch [D]iagnostics";
+          options = {
+            desc = "[S]earch [D]iagnostics";
+          };
         };
 
         "<leader>sr" = {
           action = "resume";
-          desc = "[S]earch [R]esume";
+          options = {
+            desc = "[S]earch [R]esume";
+          };
         };
 
         "<leader>s." = {
           action = "oldfiles";
-          desc = "[S]earch recent files";
+          options = {
+            desc = "[S]earch recent files";
+          };
         };
 
         "<leader><leader>" = {
           action = "buffers";
-          desc = "Find existing buffers";
+          options = {
+            desc = "Find existing buffers";
+          };
         };
       };
     };
