@@ -22,7 +22,7 @@
         html = ["prettierd" "prettier"];
         javascript = ["prettierd" "prettier"];
         nix = ["alejandra"];
-        sql = ["sleek"];
+        # sql = ["sleek"];
         "*" = ["codespell"];
       };
     };
