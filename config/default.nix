@@ -1,11 +1,17 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ./options.nix
     ./keymaps.nix
+    ./style.nix
     ./plugs
   ];
 
-  # colorschemes.tokyonight.enable = true;
+  colorschemes.tokyonight.enable = true;
 
   globals = {
     mapleader = " ";
