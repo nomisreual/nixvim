@@ -5,7 +5,7 @@
     ./plugs
   ];
 
-  colorschemes.tokyonight.enable = true;
+  # colorschemes.tokyonight.enable = true;
 
   globals = {
     mapleader = " ";
