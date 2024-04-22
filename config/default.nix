@@ -11,8 +11,6 @@
     ./plugs
   ];
 
-  colorschemes.tokyonight.enable = true;
-
   globals = {
     mapleader = " ";
     maplocalleader = " ";
