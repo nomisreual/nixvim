@@ -49,14 +49,14 @@
     }
 
     # Toggle Neotree
-    {
-      mode = "n";
-      key = "<leader>ft";
-      action = "<cmd>Neotree toggle<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Neotree";
-      };
-    }
+    # {
+    #   mode = "n";
+    #   key = "<leader>ft";
+    #   action = "<cmd>Neotree toggle<cr>";
+    #   options = {
+    #     silent = true;
+    #     desc = "Toggle Neotree";
+    #   };
+    # }
   ];
 }
