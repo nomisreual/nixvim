@@ -1,3 +1,3 @@
 {
-  plugins.copilot-vim.enable = true;
+  plugins.copilot-vim.enable = false;
 }

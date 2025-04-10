@@ -7,5 +7,6 @@
     ./sleuth.nix
     ./tmux-navigator.nix
     ./whichkey.nix
+    ./web-devicons.nix
   ];
 }

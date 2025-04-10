@@ -41,7 +41,6 @@
 
   # LSP and Formatters:
   lsp.enable = true;
-  none-ls.enable = true;
   conform.enable = true;
   fidget.enable = true;
 
@@ -51,5 +50,5 @@
   # UI
   lualine.enable = true;
 
-  extraPackages = with pkgs; [fd ripgrep sleek luajitPackages.jsregexp];
+  extraPackages = with pkgs; [fd ripgrep luajitPackages.jsregexp alejandra];
 }

@@ -1,5 +1,3 @@
-# NOTE: as I went back to plain neovim, I no longer maintain this repository.
-
 # My neovim configuration!
 
               ████   ██████            █████        ██

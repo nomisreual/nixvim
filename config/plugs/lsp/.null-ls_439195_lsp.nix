@@ -3,9 +3,7 @@
   lib,
   config,
   ...
-}: let
-  flake_location = /home/simon/.nixdots;
-in {
+}: {
   options = {
     lsp.enable =
       lib.mkEnableOption "Enable Language Server Protocol";
@@ -16,44 +14,12 @@ in {
     plugins.lsp = {
       enable = true;
       servers = {
-        lua_ls.enable = true;
-        pyright = {
-          enable = true;
-          settings = {
-            pyright = {
-              # Using Ruff's import organizer
-              disableOrganizeImports = true;
-            };
-            python = {
-              analysis = {
-                # Ignore all files for analysis to exclusively use Ruff for linting
-                ignore = ["*"];
-              };
-            };
-          };
-        };
-        ruff = {
-          enable = true;
-          settings = {
-            init_options = {
-              settings = {
-              };
-            };
-          };
-        };
-        nixd = {
-          enable = true;
-          settings = {
-            nixd = {
-              nixpkgs = {
-                expr = "import <nixpkgs> { }";
-              };
-              formatting = {
-                command = ["nixfmt"];
-              };
-            };
-          };
-        };
+        lua-ls.enable = true;
+        nil_ls.enable = true;
+        # pylsp = {
+        #   enable = true;
+        #   package = pkgs.python311Packages.python-lsp-server;
+        # };
       };
       keymaps = {
         silent = true;
@@ -62,7 +28,7 @@ in {
           # To jump back press <C-T>
           gd = {
             action = "definition";
-            desc = "[G]oto [D]definition";
+            desc = "[G]oto [D]efinition";
           };
 
           # Find references for the word under your cursor.
@@ -83,7 +49,7 @@ in {
           # the definition of its *type*, not where it was *defined*.
           "<leader>D" = {
             action = "type_definition";
-            desc = "Type [D]definition";
+            desc = "Type [D]efinition";
           };
 
           # Fuzzy find all the symbols in your current document.
