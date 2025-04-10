@@ -10,7 +10,7 @@
   config = lib.mkIf config.fidget.enable {
     # Notifications and LSP Progress
     plugins.fidget = {
-      enable = true;
+      enable = false;
       logger = {
         level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
         floatPrecision =

@@ -46,8 +46,7 @@
           };
           ruff = {
             command = lib.getExe pkgs.ruff;
-            args = "format";
-            stdin = false;
+            args = "format >2 /dev/null";
           };
           lua = {
             command = lib.getExe pkgs.stylua;

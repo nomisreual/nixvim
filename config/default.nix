@@ -51,5 +51,5 @@
   # UI
   lualine.enable = true;
 
-  extraPackages = with pkgs; [fd ripgrep sleek luajitPackages.jsregexp];
+  extraPackages = with pkgs; [fd ripgrep luajitPackages.jsregexp];
 }
