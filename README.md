@@ -1,17 +1,59 @@
-# Nixvim template
+# My neovim configuration!
 
-This template gives you a good starting point for configuring nixvim standalone.
+              ████   ██████            █████        ██
+              ██████  █████             █████
+             ███████  ██   ████████ ███  █████ ███ ███   ███ ████ ████
+            █  ████████    ███      █████  ████████ █████ █████ ████ █████
+           ███  ██████   ████████  ██   ██  ███████ █████ █████ ████ █████
+         ██████  █████   ███      ███   ███  ██████ █████ █████ ████ █████
+        ██████    ███  █████████  █████████   ████ █████ █████ ████ ██████
 
-## Configuring
+## Configuration ✍️
 
-To start configuring, just add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
-[`config/default.nix`](./config/default.nix) file
+Standalone [neovim](https://neovim.io/) configuration utilizing [nixvim](https://github.com/nix-community/nixvim). Feel free to try it out, modify it and make it your own.
 
-## Testing your new configuration
+### Current plugins:
 
-To test your configuration simply run the following command
+## Usage 🚀
 
+In order to use this configuration you need to have access to the nix package manager and have to have flakes enabled (which is available on any linux distribution and even on MacOS).
+
+To quickly try it out you can run the following:
+
+```bash
+nix run github:nomisreual/nixvim
 ```
-nix run .
+
+In case you clone this repository you can simply run `nix run .` inside of your copy. Hence, you can run this configuration wherever you have access to nix and quickly test new configurations.
+
+You can also install this configuration which gives you the familiar `nvim` command to enter your neovim setup. In order for it to work you need to add this flake as an input to your system flake, like so:
+
+```bash
+{
+inputs = {
+  ...
+  nixvim.url = "github:nomisreual/nixvim";
+  ...
+  };
+}
 ```
+
+You can then directly install it (example with home manager):
+
+```bash
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  home.packages = with pkgs; [
+    inputs.nixvim.packages.${system}.default
+    ripgrep # recommended for the fuzzy finder telescope
+    sleek # my current sql formatter of choice
+  ];
+}
+```
+
+## Acknowledgements 🥳
+
+I took a lot of inspiration from [elythhh's](https://github.com/elythh/nixvim) nixvim configuration.
