@@ -33,6 +33,11 @@
           group = "Git [H]unk";
           mode = ["n" "v"];
         }
+        {
+          __unkeyed = "<leader>l";
+          group = "[L]azyGit";
+          mode = ["n"];
+        }
       ];
 
       icons = {
