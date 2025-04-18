@@ -3,6 +3,7 @@
     mapleader = " ";
     maplocalleader = " ";
     have_nerd_font = true;
+    loaded_netrwPlugin = 0;
   };
   opts = {
     number = true;
