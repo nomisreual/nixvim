@@ -107,12 +107,15 @@
     })
   '';
   extraPlugins = with pkgs.vimPlugins; [
-    # fortune-nvim
   ];
-  extraPackages = with pkgs; [
-    ripgrep
-    fd
-    alejandra
-    stylua
-  ];
+  extraPackages = with pkgs;
+    [
+      ripgrep
+      fd
+      alejandra
+      stylua
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isLinux [
+      wl-clipboard
+    ];
 }
