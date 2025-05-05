@@ -5,7 +5,7 @@
     settings = {
       routes = [
         {
-          view = "notify";
+          view = "mini";
           filter = {
             event = "msg_showmode";
           };
