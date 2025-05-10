@@ -5,6 +5,7 @@
       "\\" = "close_window";
     };
   };
+  plugins.oil.enable = true;
   keymaps = [
     {
       # action = ":Neotree reveal<CR>";
