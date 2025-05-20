@@ -13,6 +13,8 @@
         python = ["ruff"];
         lua = ["stylua"];
         nix = ["alejandra"];
+        javascript = ["prettierd"];
+        typescript = ["prettierd"];
       };
       notify_on_error = true;
       format_on_save =
@@ -55,6 +57,9 @@
         };
         nix = {
           command = lib.getExe pkgs.alejandra;
+        };
+        prettierd = {
+          command = lib.getExe pkgs.prettierd;
         };
       };
     };

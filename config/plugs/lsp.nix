@@ -13,6 +13,9 @@
           };
         };
       };
+      ts_ls = {
+        enable = true;
+      };
       nixd = {
         enable = true;
         settings = {
