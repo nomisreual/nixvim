@@ -15,6 +15,7 @@
         nix = ["alejandra"];
         javascript = ["prettierd"];
         typescript = ["prettierd"];
+        html = ["prettierd"];
       };
       notify_on_error = true;
       format_on_save =
