@@ -25,6 +25,17 @@
           formatting = {
             cmd = "alejandra";
           };
+          options = {
+            nixos = {
+              expr = "(builtins.getFlake \"github:nomisreual/nixdots\").nixosConfigurations.desktop.options";
+            };
+            home-manager = {
+              expr = "(builtins.getFlake \"github:nomisreual/nixdots\").homeConfigurations.\"simon@desktop\".options";
+            };
+            darwin = {
+              expr = "(builtins.getFlake \"github:nomisreual/nixdots\").darwinConfigurations.macbook.options";
+            };
+          };
         };
       };
       pyright = {
