@@ -16,6 +16,7 @@
         javascript = ["prettierd"];
         typescript = ["prettierd"];
         html = ["prettierd"];
+        htmldjango = ["djlint"];
       };
       notify_on_error = true;
       format_on_save =
@@ -52,6 +53,10 @@
           command = lib.getExe pkgs.ruff;
           args = "format";
           stdin = false;
+        };
+        djlint = {
+          command = lib.getExe pkgs.djlint;
+          args = "--reformat -";
         };
         lua = {
           command = lib.getExe pkgs.stylua;
