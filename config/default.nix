@@ -19,8 +19,6 @@
     };
   };
 
-  plugins.vimwiki.enable = true;
-
   files = {
     "after/ftplugin/typescript.lua" = {
       opts = {

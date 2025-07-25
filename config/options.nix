@@ -4,6 +4,7 @@
     maplocalleader = " ";
     have_nerd_font = true;
     loaded_netrwPlugin = 0;
+    wiki_root = "~/wiki";
   };
   opts = {
     number = true;
