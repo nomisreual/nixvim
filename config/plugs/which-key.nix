@@ -38,6 +38,16 @@
           group = "[L]azyGit";
           mode = ["n"];
         }
+        {
+          __unkeyed = "<leader>w";
+          group = "[W]iki";
+          mode = ["n"];
+        }
+        {
+          __unkeyed = "<leader>wi";
+          group = "[W]iki [I]ndex";
+          mode = ["n"];
+        }
       ];
 
       icons = {

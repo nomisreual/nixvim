@@ -2,7 +2,18 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  kiwi = pkgs.vimUtils.buildVimPlugin {
+    name = "kiwi";
+    src = pkgs.fetchFromGitHub {
+      owner = "serenevoid";
+      repo = "kiwi.nvim";
+      rev = "61e86fc29365e32b44c2914a2b10c90d04a3b22e";
+      hash = "sha256-/UhbgvRSLwDHTrrB7V8b3f+mccdw8pjijFPtKxdQ1c4";
+    };
+  };
+  to_lua = str: "lua << EOF\n${str}\nEOF\n";
+in {
   # Import all your configuration modules here
   imports = [
     ./options.nix
@@ -136,15 +147,40 @@
         end
       end,
     })
+
+
+    local kiwi = require("kiwi")
+    vim.keymap.set('n', '<leader>wi', kiwi.open_wiki_index, {})
+    vim.keymap.set('n', 'T', kiwi.todo.toggle, {})
   '';
-  extraPlugins = with pkgs.vimPlugins; [
+  extraPlugins = [
+    {
+      plugin = kiwi;
+      config =
+        to_lua
+        # Kiwi does otherwise create a wiki directory in
+        # /home/USERNAME/home/USERNAME/wiki (nested)
+        /*
+        lua
+        */
+        ''
+          require("kiwi").setup({
+          {
+          name = "wiki",
+          path = "wiki"
+          }
+          })
+        '';
+    }
   ];
   extraPackages = with pkgs;
     [
-      ripgrep
-      fd
-      alejandra
-      stylua
+      ripgrep # better grep
+      fd # better find
+      fzf # fuzzy finder
+
+      alejandra # nix formatter
+      stylua # lua formatter
     ]
     ++ lib.optionals stdenv.hostPlatform.isLinux [
       wl-clipboard
