@@ -22,6 +22,10 @@ in {
     ./plugs
   ];
 
+  plugins.vimwiki = {
+    enable = true;
+  };
+
   # Catppuccin Mocha
   colorschemes = {
     catppuccin = {
@@ -150,7 +154,7 @@ in {
 
 
     local kiwi = require("kiwi")
-    vim.keymap.set('n', '<leader>wi', kiwi.open_wiki_index, {})
+    vim.keymap.set('n', '<leader>ki', kiwi.open_wiki_index, {})
     vim.keymap.set('n', 'T', kiwi.todo.toggle, {})
   '';
   extraPlugins = [
