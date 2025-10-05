@@ -22,10 +22,6 @@ in {
     ./plugs
   ];
 
-  plugins.vimwiki = {
-    enable = true;
-  };
-
   # Catppuccin Mocha
   colorschemes = {
     catppuccin = {
