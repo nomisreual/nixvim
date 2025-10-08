@@ -153,26 +153,26 @@ in {
     vim.keymap.set('n', '<leader>ki', kiwi.open_wiki_index, {})
     vim.keymap.set('n', 'T', kiwi.todo.toggle, {})
   '';
-  extraPlugins = [
-    {
-      plugin = kiwi;
-      config =
-        to_lua
-        # Kiwi does otherwise create a wiki directory in
-        # /home/USERNAME/home/USERNAME/wiki (nested)
-        /*
-        lua
-        */
-        ''
-          require("kiwi").setup({
-          {
-          name = "wiki",
-          path = "wiki"
-          }
-          })
-        '';
-    }
-  ];
+  # extraPlugins = [
+  #   {
+  #     plugin = kiwi;
+  #     config =
+  #       to_lua
+  #       # Kiwi does otherwise create a wiki directory in
+  #       # /home/USERNAME/home/USERNAME/wiki (nested)
+  #       /*
+  #       lua
+  #       */
+  #       ''
+  #         require("kiwi").setup({
+  #         {
+  #         name = "wiki",
+  #         path = "wiki"
+  #         }
+  #         })
+  #       '';
+  #   }
+  # ];
   extraPackages = with pkgs;
     [
       ripgrep # better grep
