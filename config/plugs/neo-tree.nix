@@ -1,8 +1,10 @@
 {
   plugins.neo-tree = {
     enable = true;
-    filesystem.window.mappings = {
-      "\\" = "close_window";
+    settings = {
+      filesystem.window.mappings = {
+        "\\" = "close_window";
+      };
     };
   };
   plugins.oil.enable = true;
