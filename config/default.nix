@@ -3,16 +3,7 @@
   lib,
   ...
 }: let
-  kiwi = pkgs.vimUtils.buildVimPlugin {
-    name = "kiwi";
-    src = pkgs.fetchFromGitHub {
-      owner = "serenevoid";
-      repo = "kiwi.nvim";
-      rev = "61e86fc29365e32b44c2914a2b10c90d04a3b22e";
-      hash = "sha256-/UhbgvRSLwDHTrrB7V8b3f+mccdw8pjijFPtKxdQ1c4";
-    };
-  };
-  to_lua = str: "lua << EOF\n${str}\nEOF\n";
+  # to_lua = str: "lua << EOF\n${str}\nEOF\n";
 in {
   # Import all your configuration modules here
   imports = [
@@ -29,6 +20,10 @@ in {
       settings.flavour = "mocha";
     };
   };
+
+  # Set aliases for neovim
+  viAlias = true;
+  vimAlias = true;
 
   files = {
     "after/ftplugin/typescript.lua" = {
@@ -154,24 +149,6 @@ in {
     vim.keymap.set('n', 'T', kiwi.todo.toggle, {})
   '';
   # extraPlugins = [
-  #   {
-  #     plugin = kiwi;
-  #     config =
-  #       to_lua
-  #       # Kiwi does otherwise create a wiki directory in
-  #       # /home/USERNAME/home/USERNAME/wiki (nested)
-  #       /*
-  #       lua
-  #       */
-  #       ''
-  #         require("kiwi").setup({
-  #         {
-  #         name = "wiki",
-  #         path = "wiki"
-  #         }
-  #         })
-  #       '';
-  #   }
   # ];
   extraPackages = with pkgs;
     [
@@ -183,6 +160,10 @@ in {
       stylua # lua formatter
     ]
     ++ lib.optionals stdenv.hostPlatform.isLinux [
-      wl-clipboard
+      wl-clipboard # Wayland
+      xclip # X11
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isDarwin [
+      pbcopy
     ];
 }
