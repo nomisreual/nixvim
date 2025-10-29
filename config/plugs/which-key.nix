@@ -39,12 +39,12 @@
           mode = ["n"];
         }
         {
-          __unkeyed = "<leader>w";
+          __unkeyed = "<leader>k";
           group = "[W]iki";
           mode = ["n"];
         }
         {
-          __unkeyed = "<leader>wi";
+          __unkeyed = "<leader>ki";
           group = "[W]iki [I]ndex";
           mode = ["n"];
         }
