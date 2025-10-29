@@ -41,7 +41,7 @@ Standalone [neovim](https://neovim.io/) configuration utilizing [nixvim](https:/
 
 [Catppuccin Mocha](https://github.com/catppuccin/nvim)
 
-### A word on [nixd](https://github.com/nix-community/nixd)(LSP used for *nix* files):
+### A word on [nixd](https://github.com/nix-community/nixd) (LSP used for *nix* files):
 
 I pass in option sets from my [personal configuration](https://github.com/nomisreual/nixdots):
 
