@@ -10,51 +10,14 @@ in {
     ./options.nix
     ./keymaps.nix
     ./autocmds.nix
+    ./colorscheme.nix
+    ./ftplugin.nix
     ./plugs
   ];
-
-  # Catppuccin Mocha
-  colorschemes = {
-    catppuccin = {
-      enable = true;
-      settings.flavour = "mocha";
-    };
-  };
 
   # Set aliases for neovim
   viAlias = true;
   vimAlias = true;
-
-  files = {
-    "after/ftplugin/typescript.lua" = {
-      opts = {
-        expandtab = true;
-        shiftwidth = 2;
-        tabstop = 2;
-      };
-    };
-    "after/ftplugin/javascript.lua" = {
-      opts = {
-        expandtab = true;
-        shiftwidth = 2;
-        tabstop = 2;
-      };
-    };
-    "after/ftplugin/html.lua" = {
-      opts = {
-        expandtab = true;
-        shiftwidth = 2;
-        tabstop = 2;
-      };
-    };
-    "after/ftplugin/nix.lua" = {
-      opts = {
-        expandtab = true;
-        shiftwidth = 2;
-        tabstop = 2;
-      };
-    };
-  };
 
   extraConfigLuaPost = ''
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -148,8 +111,11 @@ in {
     vim.keymap.set('n', '<leader>ki', kiwi.open_wiki_index, {})
     vim.keymap.set('n', 'T', kiwi.todo.toggle, {})
   '';
+
+  # Add extra Plugins here:
   # extraPlugins = [
   # ];
+
   extraPackages = with pkgs;
     [
       ripgrep # better grep
