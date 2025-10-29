@@ -41,6 +41,43 @@ Standalone [neovim](https://neovim.io/) configuration utilizing [nixvim](https:/
 
 [Catppuccin Mocha](https://github.com/catppuccin/nvim)
 
+### A word on [nixd](https://github.com/nix-community/nixd)(LSP used for *nix* files):
+
+I pass in option sets from my [personal configuration](https://github.com/nomisreual/nixdots):
+
+```nix
+# plugs/lsp.nix
+
+plugins.lsp = {
+  enable = true;
+  servers = {
+    nixd = {
+      enable = true;
+      settings = {
+        nixpkgs = {
+          expr = "import <nixpkgs> { }";
+        };
+        formatting = {
+          cmd = "alejandra";
+        };
+        options = {
+          nixos = {
+            expr = "(builtins.getFlake \"github:nomisreual/nixdots\").nixosConfigurations.desktop.options";
+          };
+          home-manager = {
+            expr = "(builtins.getFlake \"github:nomisreual/nixdots\").homeConfigurations.\"simon@desktop\".options";
+          };
+          darwin = {
+            expr = "(builtins.getFlake \"github:nomisreual/nixdots\").darwinConfigurations.macbook.options";
+          };
+        };
+      };
+  # other servers
+  };
+};
+```
+Adjust this part accordingly (pointing to your options).
+
 ## Usage 🚀
 
 In order to use this configuration you need to have access to the nix package manager and have to have flakes enabled (which is available on any linux distribution, MacOS and Windows via WSL2).
