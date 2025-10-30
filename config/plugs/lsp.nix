@@ -2,6 +2,7 @@
   plugins.lsp = {
     enable = true;
     servers = {
+      tinymist.enable = true;
       bashls = {
         enable = true;
       };
