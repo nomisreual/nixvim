@@ -9,5 +9,8 @@
       enable = true;
       settings.flavour = "mocha";
     };
+    gruvbox = {
+      enable = false;
+    };
   };
 }
